@@ -1,4 +1,4 @@
-## SCAD Super Computing stAte Dashboard
+## SCCAD Super Computing stAte Dashboard
 
 超算集群状态监控面板
 

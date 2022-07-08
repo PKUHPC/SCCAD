@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>{{_("PEKING UNIVERSITY HPC Platform")}}</title>
+    <link href="/static/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/hpc.css" rel="stylesheet" type="text/css">
+    <link href="/css/base.css" rel="stylesheet" type="text/css">
+    <link href="/css/index.css" rel="stylesheet" type="text/css">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="introTit clearfix">
+            <h2>{{_("PEKING UNIVERSITY HPC Platform")}}</h2>
+        </div>
+        {% block body %}{% endblock %}
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <script src="/static/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/static/bootstrap-4.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/comm.js"></script>
+    {% block bottom %}{% endblock %}
+</body>
+</html>

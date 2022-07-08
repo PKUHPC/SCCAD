@@ -1,0 +1,7 @@
+from config import Config
+
+config = Config()
+
+config.REDIS['hosts'] = "192.168.1.1"
+config.REDIS['port'] = 9999
+config.REDIS['password'] = "RedisPassword"

@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<!-- DataTables CSS -->
+<link href="/static/DataTables-1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+<!-- DataTables Responsive CSS -->
+<link href="/static/Responsive-2.2.0/css/responsive.dataTables.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/job.css">
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+
+    {{ super() }}
+
+    <h5 class="m-2">{{_("Job State")}}</h5>
+    <ul class="list-inline m-2">
+        <div class="row">
+            <li class="col-md-3 col-sm-6">{{_("Running Job")}}：<strong>0</strong></li>
+            <li class="col-md-3 col-sm-6">{{_("Pending Job")}}：<strong>0</strong></li>
+            <li class="col-md-3 col-sm-6">{{_("Running User")}}：<strong>0</strong></li>
+            <li class="col-md-3 col-sm-6">{{_("Pending User")}}：<strong>0</strong></li>
+        </div>
+    </ul>
+    <hr>
+    <h5 class="m-2">{{_("Job Information")}}</h5>
+    <table id="jobs" class="display" width="100%" cellspacing="0">
+        <thead>
+            <th>{{_("Job Name")}}</th>
+            <th>{{_("Account")}}</th>
+            <th>{{_("User")}}</th>
+            <th>{{_("Partition")}}</th>
+            <th>{{_("QOS")}}</th>
+            <th>{{_("Node Amount")}}</th>
+            <th>{{_("Core Amount")}}</th>
+            <th>{{_("State")}}</th>
+            <th>{{_("Running/Pending Time")}}</th>
+            <th>{{_("time_sort")}}</th>
+            <th>{{_("Description")}}</th>
+        </thead>
+    </table>
+</div>
+{% endblock %}
+
+{% block bottom %}
+{{ super() }}
+<!-- DataTables JavaScript -->
+<script src="/static/DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="/static/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript">
+var job_col = [
+    { data: "name"},
+    { data: "account" },
+    { data: "user" },
+    { data: "partition" },
+    { data: "qos" },
+    { data: "node" },
+    { data: "cpu" },
+    { data: "state" },
+    { data: "time_used" },
+    { data: "time_used_sort" },
+    { data: "info" }
+]
+$(".introTit h2").after('<a class="h-btn" style="color:#8f000b;font-size:18px; float:right;" href="{{url_for("stat_index",cluster=page['cluster_show'])}}">&lt; 返回</a>')
+$(document).ready(function() {
+    $.get("/job/{{page['cluster']}}/all",function(data){
+        $('#jobs').DataTable({
+            "columns" : job_col,
+            "data" : data.data,
+            "scrollX" : true,
+            "lengthMenu" : [[50, 100, -1], [50, 100, "All"]],
+            "columnDefs" : [
+                {"orderData" :9, "targets": 8},
+                {"visible" : false,"targets":9}
+            ]
+        }).on('draw',function(){
+            $('tr :contains("PENDING")').parent().addClass("text-danger")
+            $('tr :contains("RUNNING")').parent().addClass("text-success")
+        });
+        $('tr :contains("PENDING")').parent().addClass("text-danger")
+        $('tr :contains("RUNNING")').parent().addClass("text-success")
+        $('ul.list-inline li:eq(0)').children().html(data.running_job_num)
+        $('ul.list-inline li:eq(1)').children().html(data.pending_job_num)
+        $('ul.list-inline li:eq(2)').children().html(data.running_user_num)
+        $('ul.list-inline li:eq(3)').children().html(data.pending_user_num)
+    })
+    $('#jobs').removeClass( 'display' ).addClass('table table-striped table-bordered table-hover');
+
+});
+
+</script>
+{% endblock %}

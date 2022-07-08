@@ -1,0 +1,14 @@
+test.py
+*pdf
+*.log*
+__pycache__/
+*test*.py
+crontab/
+*pyc
+.DS_Store
+.sass-cache/
+local.py
+uwsgi.*
+*xlsx
+.idea/
+log/

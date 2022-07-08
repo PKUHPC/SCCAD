@@ -1,0 +1,16 @@
+import config
+
+setting = config.DevConfig()
+
+# setting.projects_file_path = "20181225.xlsx"
+
+##  TODO Redis服务器信息
+setting.REDIS["hosts"] = "192.168.1.1"
+setting.REDIS["port"] = 9999
+setting.REDIS["password"] = "RedisPasswd"
+
+setting.MYSQL["host"] = "192.168.1.2"
+setting.MYSQL["table"]["history"] = "history_stat"
+setting.MYSQL["database"] = "hpc_db"
+setting.MYSQL["passwd"] = "dbpasswd"
+setting.MYSQL["user"] = "dbuser"

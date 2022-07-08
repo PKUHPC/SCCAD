@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<!-- DataTables CSS -->
+<link href="/static/DataTables-1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+<!-- DataTables Responsive CSS -->
+<link href="/static/Responsive-2.2.0/css/responsive.dataTables.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+
+    {{ super() }}
+
+    <h5 class="m-2">{{_("Node Information")}}</h5>
+    <table id="nodes" class="display" width="100%" cellspacing="0">
+        <thead>
+            <th>{{_("Node Name")}}</th>
+            <th>{{_("Node State")}}</th>
+            <th>{{_("Node Type")}}</th>
+            <th>{{_("Resource Amount")}}</th>
+            <th>{{_("Resource Used")}}</th>
+            <th>{{_("Resource Usage Rate")}}</th>
+            <th>{{_("Resource Usage Hide")}}</th>
+            <th>{{_("Memery Amount")}}</th>
+            <th>{{_("Memery Used")}}</th>
+        </thead>
+    </table>
+</div>
+
+{% endblock %}
+
+{% block bottom %}
+{{ super() }}
+<!-- DataTables JavaScript -->
+<script src="/static/DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="/static/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript">
+var node_col = [
+    { data: "name"},
+    { data: "state"},
+    { data: "type"},
+    { data: "res_tot"},
+    { data: "res_alloc"},
+    { data: "res_usage"},
+    { data: "res_usage_sort"},
+    { data: "mem_tot"},
+    { data: "mem_alloc"}
+];
+
+$(document).ready(function() {
+    $(".introTit h2").after('<a class="h-btn" style="color:#8f000b;font-size:18px; float:right;" href="{{url_for("stat_index",cluster=page['cluster_show'])}}">&lt; 返回</a>')
+    $.get("/node/{{page['cluster']}}/all",function(data){
+        $('#nodes').DataTable({
+            "columns" : node_col,
+            "data" : data.data,
+            "lengthMenu" : [[50, 100, -1], [50, 100, "All"]],
+            "columnDefs" : [
+                {"orderData" :[6], "targets": [5]},
+                {"visible" : false,"targets":[6],"searchable": false}
+            ]
+        }).on('draw',function(){
+            $('tr :contains("Error")').parent().addClass("text-danger");
+            $('tr :contains("Busy")').parent().addClass("text-secondary");
+            $('tr :contains("Running")').parent().addClass("text-info");
+            $('tr :contains("Available")').parent().addClass("text-success");
+        });
+        $('tr :contains("Error")').parent().addClass("text-danger");
+        $('tr :contains("Busy")').parent().addClass("text-secondary");
+        $('tr :contains("Running")').parent().addClass("text-info");
+        $('tr :contains("Available")').parent().addClass("text-success");
+    })
+    $('#nodes').removeClass( 'display' ).addClass('table table-striped table-bordered table-hover');
+
+});
+</script>
+{% endblock %}

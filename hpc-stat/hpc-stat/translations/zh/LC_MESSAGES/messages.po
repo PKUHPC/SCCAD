@@ -1,0 +1,280 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-07-08 16:38+0800\n"
+"PO-Revision-Date: 2019-04-23 17:33+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: model/Node.py:120 templates/stat.html:20 view/StatView.py:37
+#: view/StatView.py:51 view/StatView.py:65 view/StatView.py:90
+msgid "Error"
+msgstr "不可用"
+
+#: model/Node.py:121 templates/stat.html:18 view/StatView.py:38
+#: view/StatView.py:52 view/StatView.py:66 view/StatView.py:91
+msgid "Available"
+msgstr "可用数"
+
+#: model/Node.py:122 templates/stat.html:19 view/StatView.py:39
+#: view/StatView.py:53 view/StatView.py:67 view/StatView.py:92
+msgid "Running"
+msgstr "运行中"
+
+#: templates/job.html:16
+msgid "Job State"
+msgstr ""
+
+#: templates/job.html:19 view/StatView.py:108 view/StatView.py:119
+#: view/StatView.py:220 view/StatView.py:273
+msgid "Running Job"
+msgstr "运行中的作业"
+
+#: templates/job.html:20 view/StatView.py:109 view/StatView.py:120
+msgid "Pending Job"
+msgstr "排队中的作业"
+
+#: templates/job.html:21 view/StatView.py:110 view/StatView.py:121
+msgid "Running User"
+msgstr "运行中的用户"
+
+#: templates/job.html:22 view/StatView.py:111 view/StatView.py:122
+msgid "Pending User"
+msgstr "排队中的用户"
+
+#: templates/job.html:26 templates/stat.html:104
+msgid "Job Information"
+msgstr "作业信息"
+
+#: templates/job.html:29
+msgid "Job Name"
+msgstr "作业名"
+
+#: templates/job.html:30
+msgid "Account"
+msgstr "账户"
+
+#: templates/job.html:31 view/StatView.py:218 view/StatView.py:271
+msgid "User"
+msgstr "用户"
+
+#: templates/job.html:32
+msgid "Partition"
+msgstr "分区"
+
+#: templates/job.html:33
+msgid "QOS"
+msgstr "QOS"
+
+#: templates/job.html:34
+msgid "Node Amount"
+msgstr "节点数"
+
+#: templates/job.html:35
+msgid "Core Amount"
+msgstr "核心数"
+
+#: templates/job.html:36
+msgid "State"
+msgstr ""
+
+#: templates/job.html:37
+msgid "Running/Pending Time"
+msgstr "运行/排队时间"
+
+#: templates/job.html:38
+msgid "time_sort"
+msgstr "时间排序"
+
+#: templates/job.html:39
+msgid "Description"
+msgstr "说明"
+
+#: templates/layout.html:7 templates/layout.html:17
+msgid "PEKING UNIVERSITY HPC Platform"
+msgstr ""
+
+#: templates/node.html:15
+msgid "Node Information"
+msgstr "节点信息"
+
+#: templates/node.html:18
+msgid "Node Name"
+msgstr "节点名"
+
+#: templates/node.html:19
+msgid "Node State"
+msgstr ""
+
+#: templates/node.html:20
+msgid "Node Type"
+msgstr "节点类型"
+
+#: templates/node.html:21
+msgid "Resource Amount"
+msgstr "资源总量"
+
+#: templates/node.html:22
+msgid "Resource Used"
+msgstr "资源使用量"
+
+#: templates/node.html:23
+msgid "Resource Usage Rate"
+msgstr "资源使用率"
+
+#: templates/node.html:24
+msgid "Resource Usage Hide"
+msgstr ""
+
+#: templates/node.html:25
+msgid "Memery Amount"
+msgstr "节点内存"
+
+#: templates/node.html:26
+msgid "Memery Used"
+msgstr "已用内存"
+
+#: templates/stat.html:17
+msgid "Total"
+msgstr "总数"
+
+#: templates/stat.html:32
+msgid "2 DAYS"
+msgstr "近2日"
+
+#: templates/stat.html:33
+msgid "7 DAYS"
+msgstr "近7日"
+
+#: templates/stat.html:34
+msgid "30 DAYS"
+msgstr "近30日"
+
+#: templates/stat.html:35
+msgid "2 MONTHS"
+msgstr "近2月"
+
+#: templates/stat.html:36
+msgid "6 MONTHS"
+msgstr "近6月"
+
+#: templates/stat.html:37
+msgid "1 YEAR"
+msgstr "近1年"
+
+#: templates/stat.html:41
+msgid "start-date"
+msgstr "开始时间"
+
+#: templates/stat.html:44
+msgid "end-date"
+msgstr "截止时间"
+
+#: templates/stat.html:47
+msgid "Query"
+msgstr "查询"
+
+#: templates/stat.html:55
+msgid "Clusters Overview"
+msgstr "平台概况"
+
+#: templates/stat.html:58 view/StatView.py:215 view/StatView.py:268
+msgid "Node Usage"
+msgstr "节点使用率"
+
+#: templates/stat.html:62 view/StatView.py:216 view/StatView.py:269
+msgid "Core Usage"
+msgstr "核心使用率"
+
+#: templates/stat.html:66 view/StatView.py:219 view/StatView.py:222
+#: view/StatView.py:272
+msgid "Job"
+msgstr "作业"
+
+#: templates/stat.html:84
+msgid "Nodes"
+msgstr "节点"
+
+#: templates/stat.html:90
+msgid "Cores"
+msgstr "核心"
+
+#: templates/stat.html:91
+msgid "GPUs"
+msgstr "GPU卡"
+
+#: templates/stat.html:111
+msgid "TOP5 Job Pending Time"
+msgstr "作业排队时间 TOP5"
+
+#: templates/stat.html:118
+msgid "TOP5 Job Running Time"
+msgstr "作业运行时间 TOP5"
+
+#: templates/stat.html:131
+msgid "Nodes Usage History"
+msgstr "节点使用率历史"
+
+#: templates/stat.html:139
+msgid "User Job History"
+msgstr "用户作业数历史"
+
+#: templates/stat.html:192
+msgid "MAX:"
+msgstr "最大值: "
+
+#: templates/stat.html:192
+msgid "MIN:"
+msgstr "最小值: "
+
+#: templates/stat.html:192
+msgid "AVG:"
+msgstr "平均值: "
+
+#: templates/stat.html:212
+msgid "No Data"
+msgstr "暂无数据"
+
+#: view/NodeView.py:27
+msgid "GPU CARD"
+msgstr "GPU卡"
+
+#: view/NodeView.py:27
+msgid "CPU CORE"
+msgstr "CPU核心"
+
+#: view/StatView.py:149
+msgid "CPU Nodes"
+msgstr "CPU节点"
+
+#: view/StatView.py:159
+msgid "GPU Nodes"
+msgstr "GPU节点"
+
+#: view/StatView.py:217 view/StatView.py:270
+msgid "GPU Usage"
+msgstr "GPU使用率"
+
+#: view/StatView.py:221 view/StatView.py:274
+msgid "Waiting Job"
+msgstr "排队中的作业"
+
+#: view/StatView.py:223 view/StatView.py:275
+msgid "PUE"
+msgstr "PUE"
+
+#: view/StatView.py:224 view/StatView.py:276
+msgid "POWER"
+msgstr "电力负荷"

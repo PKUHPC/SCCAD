@@ -1,0 +1,10 @@
+@charset "utf-8";
+.stat-chart-6 .donut-chart {height:150px;}
+.stat-chart-12 .donut-chart {height:300px;}
+.donut-chart{margin: auto;}
+a{color: black;}
+#history h6{padding-top: 5px;}
+.chart_header{
+	margin-top: 15px;
+	margin-bottom: 10px;
+}

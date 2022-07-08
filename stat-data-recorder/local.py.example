@@ -1,0 +1,15 @@
+from Config import Config
+
+config = Config()
+config.CLUSTER = "hpc01"
+
+config.DB["host"] = "192.168.1.2"
+config.DB["port"] = 3306
+config.DB["user"] = "dbuser"
+config.DB["passwd"] = 'dbpasswd'
+config.DB["db"] = "hpc_db"
+config.DB["table"] = "db_stat"
+
+config.REDIS["hosts"] = "192.168.1.1"
+config.REDIS["port"] = 9999
+config.REDIS["password"] = "RedisPasswd"

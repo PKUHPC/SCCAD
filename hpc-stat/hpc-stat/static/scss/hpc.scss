@@ -1,0 +1,70 @@
+$pku-red:#8c0000;
+$body-max-width:1200px;
+
+$theme-colors: (
+  "pku-red":$pku-red,
+  "primary":$pku-red,
+  "pku-1":#DC5712,
+  "pku-2":#FFC000,
+  "pku-3":#89BEB2,
+  "pku-4":#C9BA83,
+  "pku-5":#DED38C,
+  "pku-6":#FFD966,
+  "pku-7":#DFB5B7,
+  "pku-8":#DE9C53,
+);
+.container-fluid{
+	max-width: $body-max-width;
+}
+.fot_bot{
+    box-sizing:content-box;
+	span{
+		box-sizing:content-box;
+	}
+}
+#gotoTop{
+	box-sizing:content-box;
+}
+footer.footer{
+    box-sizing:content-box;
+}
+.introTitImg {
+	float:left;
+	width:120px;
+	height:64px;
+	background-color:$pku-red;
+	background-image:url(smallPic7.jpg);
+}
+
+.introTit {
+	margin-top:30px;
+	margin-bottom:30px;
+	h2 {
+		float:left;
+		padding:0 27px;
+		border-bottom:3px solid $pku-red;
+		font-size:24px;
+		line-height:61px;
+	}
+    .h-btn{
+        height: 64px;
+        line-height: 64px;
+    }
+}
+a {
+    &.nav-link.history.active{
+        &:hover{
+            color: white;
+        }
+    }
+}
+
+$font-family-sans-serif: "Arial",'Microsoft Yahei',"Lucida Grande", "Tahoma", "Helvetica", "sans-serif";
+
+@import "bootstrap/bootstrap";
+
+.nav-link {
+	background-color: $list-group-bg;
+  	border: $list-group-border-width solid $list-group-border-color;
+	font-size: 1rem;
+}

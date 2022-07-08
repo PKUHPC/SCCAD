@@ -1,0 +1,280 @@
+# Translations template for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-07-08 16:38+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: model/Node.py:120 templates/stat.html:20 view/StatView.py:37
+#: view/StatView.py:51 view/StatView.py:65 view/StatView.py:90
+msgid "Error"
+msgstr ""
+
+#: model/Node.py:121 templates/stat.html:18 view/StatView.py:38
+#: view/StatView.py:52 view/StatView.py:66 view/StatView.py:91
+msgid "Available"
+msgstr ""
+
+#: model/Node.py:122 templates/stat.html:19 view/StatView.py:39
+#: view/StatView.py:53 view/StatView.py:67 view/StatView.py:92
+msgid "Running"
+msgstr ""
+
+#: templates/job.html:16
+msgid "Job State"
+msgstr ""
+
+#: templates/job.html:19 view/StatView.py:108 view/StatView.py:119
+#: view/StatView.py:220 view/StatView.py:273
+msgid "Running Job"
+msgstr ""
+
+#: templates/job.html:20 view/StatView.py:109 view/StatView.py:120
+msgid "Pending Job"
+msgstr ""
+
+#: templates/job.html:21 view/StatView.py:110 view/StatView.py:121
+msgid "Running User"
+msgstr ""
+
+#: templates/job.html:22 view/StatView.py:111 view/StatView.py:122
+msgid "Pending User"
+msgstr ""
+
+#: templates/job.html:26 templates/stat.html:104
+msgid "Job Information"
+msgstr ""
+
+#: templates/job.html:29
+msgid "Job Name"
+msgstr ""
+
+#: templates/job.html:30
+msgid "Account"
+msgstr ""
+
+#: templates/job.html:31 view/StatView.py:218 view/StatView.py:271
+msgid "User"
+msgstr ""
+
+#: templates/job.html:32
+msgid "Partition"
+msgstr ""
+
+#: templates/job.html:33
+msgid "QOS"
+msgstr ""
+
+#: templates/job.html:34
+msgid "Node Amount"
+msgstr ""
+
+#: templates/job.html:35
+msgid "Core Amount"
+msgstr ""
+
+#: templates/job.html:36
+msgid "State"
+msgstr ""
+
+#: templates/job.html:37
+msgid "Running/Pending Time"
+msgstr ""
+
+#: templates/job.html:38
+msgid "time_sort"
+msgstr ""
+
+#: templates/job.html:39
+msgid "Description"
+msgstr ""
+
+#: templates/layout.html:7 templates/layout.html:17
+msgid "PEKING UNIVERSITY HPC Platform"
+msgstr ""
+
+#: templates/node.html:15
+msgid "Node Information"
+msgstr ""
+
+#: templates/node.html:18
+msgid "Node Name"
+msgstr ""
+
+#: templates/node.html:19
+msgid "Node State"
+msgstr ""
+
+#: templates/node.html:20
+msgid "Node Type"
+msgstr ""
+
+#: templates/node.html:21
+msgid "Resource Amount"
+msgstr ""
+
+#: templates/node.html:22
+msgid "Resource Used"
+msgstr ""
+
+#: templates/node.html:23
+msgid "Resource Usage Rate"
+msgstr ""
+
+#: templates/node.html:24
+msgid "Resource Usage Hide"
+msgstr ""
+
+#: templates/node.html:25
+msgid "Memery Amount"
+msgstr ""
+
+#: templates/node.html:26
+msgid "Memery Used"
+msgstr ""
+
+#: templates/stat.html:17
+msgid "Total"
+msgstr ""
+
+#: templates/stat.html:32
+msgid "2 DAYS"
+msgstr ""
+
+#: templates/stat.html:33
+msgid "7 DAYS"
+msgstr ""
+
+#: templates/stat.html:34
+msgid "30 DAYS"
+msgstr ""
+
+#: templates/stat.html:35
+msgid "2 MONTHS"
+msgstr ""
+
+#: templates/stat.html:36
+msgid "6 MONTHS"
+msgstr ""
+
+#: templates/stat.html:37
+msgid "1 YEAR"
+msgstr ""
+
+#: templates/stat.html:41
+msgid "start-date"
+msgstr ""
+
+#: templates/stat.html:44
+msgid "end-date"
+msgstr ""
+
+#: templates/stat.html:47
+msgid "Query"
+msgstr ""
+
+#: templates/stat.html:55
+msgid "Clusters Overview"
+msgstr ""
+
+#: templates/stat.html:58 view/StatView.py:215 view/StatView.py:268
+msgid "Node Usage"
+msgstr ""
+
+#: templates/stat.html:62 view/StatView.py:216 view/StatView.py:269
+msgid "Core Usage"
+msgstr ""
+
+#: templates/stat.html:66 view/StatView.py:219 view/StatView.py:222
+#: view/StatView.py:272
+msgid "Job"
+msgstr ""
+
+#: templates/stat.html:84
+msgid "Nodes"
+msgstr ""
+
+#: templates/stat.html:90
+msgid "Cores"
+msgstr ""
+
+#: templates/stat.html:91
+msgid "GPUs"
+msgstr ""
+
+#: templates/stat.html:111
+msgid "TOP5 Job Pending Time"
+msgstr ""
+
+#: templates/stat.html:118
+msgid "TOP5 Job Running Time"
+msgstr ""
+
+#: templates/stat.html:131
+msgid "Nodes Usage History"
+msgstr ""
+
+#: templates/stat.html:139
+msgid "User Job History"
+msgstr ""
+
+#: templates/stat.html:192
+msgid "MAX:"
+msgstr ""
+
+#: templates/stat.html:192
+msgid "MIN:"
+msgstr ""
+
+#: templates/stat.html:192
+msgid "AVG:"
+msgstr ""
+
+#: templates/stat.html:212
+msgid "No Data"
+msgstr ""
+
+#: view/NodeView.py:27
+msgid "GPU CARD"
+msgstr ""
+
+#: view/NodeView.py:27
+msgid "CPU CORE"
+msgstr ""
+
+#: view/StatView.py:149
+msgid "CPU Nodes"
+msgstr ""
+
+#: view/StatView.py:159
+msgid "GPU Nodes"
+msgstr ""
+
+#: view/StatView.py:217 view/StatView.py:270
+msgid "GPU Usage"
+msgstr ""
+
+#: view/StatView.py:221 view/StatView.py:274
+msgid "Waiting Job"
+msgstr ""
+
+#: view/StatView.py:223 view/StatView.py:275
+msgid "PUE"
+msgstr ""
+
+#: view/StatView.py:224 view/StatView.py:276
+msgid "POWER"
+msgstr ""
+

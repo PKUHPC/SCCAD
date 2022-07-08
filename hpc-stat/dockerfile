@@ -1,0 +1,26 @@
+# data service image for hpc clusters
+
+FROM nginx:stable-alpine
+
+MAINTAINER Ruomiao
+
+ENV TZ Asia/Shanghai
+
+ADD hpc-stat /hpc-stat
+ADD start.sh /start.sh
+
+RUN echo "http://mirrors.aliyun.com/alpine/latest-stable/main/" > /etc/apk/repositories && \
+    echo "http://mirrors.aliyun.com/alpine/latest-stable/community/" >> /etc/apk/repositories && \
+    apk add --no-cache gcc python3-dev libc-dev linux-headers openssh-client && \
+    apk add --no-cache python3 && \
+    python3 -m ensurepip && \
+    rm -r /usr/lib/python*/ensurepip && \
+    pip3 install --upgrade pip setuptools && \
+    if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
+    if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
+    pip3 install uwsgi && \
+    apk del gcc python3-dev libc-dev linux-headers && \
+    rm -r /root/.cache && pip3 install -r /hpc-stat/requirements.txt && \
+    echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
+
+ENTRYPOINT /start.sh
